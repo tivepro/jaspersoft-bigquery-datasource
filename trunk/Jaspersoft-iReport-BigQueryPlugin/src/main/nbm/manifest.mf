@@ -1,0 +1,5 @@
+OpenIDE-Module-Install: com/jaspersoft/ireport/bigquery/Installer.class
+OpenIDE-Module-Layer: com/jaspersoft/ireport/bigquery/layer.xml
+OpenIDE-Module-Localizing-Bundle: com/jaspersoft/ireport/bigquery/Bundle.properties
+OpenIDE-Module-Module-Dependencies: com.jaspersoft.ireport/1 > 1.0,
+ org.openide.modules > 7.7.1, org.openide.util > 7.18.1.1
