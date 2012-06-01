@@ -1,9 +1,7 @@
 #labels Featured
-#Installing and Configuring the Jaspersoft !BigQuery Connector
+= Installation =
 
-= Introduction =
-
-Add your content here.
+Installing and Configuring the Jaspersoft !BigQuery Connector
 
 
 = Details =
