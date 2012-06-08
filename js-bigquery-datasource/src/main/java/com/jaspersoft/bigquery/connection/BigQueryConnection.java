@@ -51,6 +51,8 @@ public class BigQueryConnection implements Connection {
 
     private String projectId;
 
+    private static final String APPLICATION_NAME = "Jaspersoft BigQuery Connector 0.0.2";
+
     private final Logger logger = Logger.getLogger(BigQueryConnection.class);
 
     private Bigquery bigquery;
@@ -78,7 +80,7 @@ public class BigQueryConnection implements Connection {
                 .setServiceAccountScopes(BigqueryScopes.BIGQUERY)
                 .setServiceAccountPrivateKeyFromP12File(privateKeyFile).build();
 
-        bigquery = Bigquery.builder(transport, jsonFactory).setApplicationName("Google-BigQuery-Application/1.0")
+        bigquery = Bigquery.builder(transport, jsonFactory).setApplicationName(APPLICATION_NAME)
                 .setHttpRequestInitializer(credential).build();
     }
 
