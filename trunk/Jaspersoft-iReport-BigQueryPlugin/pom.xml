@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jaspersoft.bigquery</groupId>
 	<artifactId>Jaspersoft-iReport-BigQueryPlugin</artifactId>
-	<version>0.0.1</version>
+	<version>0.0.2</version>
 	<packaging>nbm</packaging>
 	<name>Jaspersoft iReport BigQuery Plugin</name>
 
@@ -66,7 +66,7 @@
 		<dependency>
 			<groupId>com.jaspersoft.connectors.bigquery</groupId>
 			<artifactId>js-bigquery-datasource</artifactId>
-			<version>0.0.1</version>
+			<version>0.0.2</version>
 		</dependency>
 	</dependencies>
 
