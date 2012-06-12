@@ -38,7 +38,7 @@ Download the following files present under download tab in current page:
   * js-bigquery-datasource-0.0.1
 
 ==*3. Deploy Jaspersoft !BigQuery connector to iReport*==
-  * Select Tool->Plugin
+  * Select Tool → Plugin
   * Choose 'Downloaded' tab
   * Click on Add Plugins and navigate to 'Jaspersoft-iReport-!BigQueryPlugin-0.0.1.nbm' file download location and select the file.
   * Click on install in Plugins wizard to install the plugin.
@@ -52,7 +52,7 @@ Download the following files present under download tab in current page:
   * Click on 'Test' to test the connection for success.
   
 ==*5. Create a report*==
-  * Select File->New
+  * Select File → New
   * Choose any template and click "Launch Report Wizard".
   * Set the report name and location.
   * Create a query to retrieve data. Ensure if not using the sample datasets, create a dataset and table in Google Storage.
