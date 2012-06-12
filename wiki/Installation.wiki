@@ -68,7 +68,7 @@ Download the following files present under download tab in current page:
   * Define the data source in !JasperReports Server
   * Right-click a folder, add a Data Source
   * Set the Data Source properties   
-   ===*Report*===
+===*Report*===
 Use either the !JasperReports Server web interface or the iReport   Repository Navigator to deploy the report.
 
 Deploying the report to !JasperReports Server from iReport:
