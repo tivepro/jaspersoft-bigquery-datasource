@@ -1,6 +1,8 @@
 = Introduction =
 Sign Up for !BigQuery Service
+
 1 !BigQuery Service Activation
+
 2 Generating API Access ID
 
 = Details =
