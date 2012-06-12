@@ -70,6 +70,7 @@ Download the following files present under download tab in current page:
   * Set the Data Source properties   
 ===*Report*===
 Use either the !JasperReports Server web interface or the iReport   Repository Navigator to deploy the report.
+
 Deploying the report to !JasperReports Server from iReport:
   * In the !JasperReports Server Repository Window, create a new server
   * Set the configuration properties for the server. Default organization name is organization_1
