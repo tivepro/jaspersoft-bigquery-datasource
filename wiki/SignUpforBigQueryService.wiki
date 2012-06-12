@@ -27,7 +27,7 @@ Note:You may also choose to use previously generated OAuth !ClientId and its pri
 
 3. Download the private key 
 
-4. Note down the following details to associate this credentials for !Jaspersoft-BigQuery integration :
+4. Note down the following details to associate this credentials for Jaspersoft-!BigQuery integration :
      * account email id
      * project id 
 Note:You can find project id in the Google APIs Console's url with the particular project chosen as your current project
