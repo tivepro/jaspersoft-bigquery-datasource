@@ -1,4 +1,4 @@
-= Introduction =
+= Summary =
 *Sign Up for !BigQuery Service*
 
 *1. !BigQuery Service Activation*
