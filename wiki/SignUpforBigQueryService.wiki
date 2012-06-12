@@ -22,6 +22,7 @@ Sign Up for !BigQuery Service
 1. Navigate to the API Access on the left-hand sidebar.
 
 2. Generate OAuth !ClientId for 'Service Account' application type.
+
 Note:You may also choose to use previously generated OAuth !ClientId and its private key for 'Service Account' application type.
 
 3. Download the private key 
