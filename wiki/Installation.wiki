@@ -3,10 +3,81 @@
 
 Installing and Configuring the Jaspersoft !BigQuery Connector
 
+==*1.Sign Up for !BigQuery*==
+==*2.Jaspersoft !BigQuery connector*==
+==*3.Deploy Jaspersoft !BigQuery connector to iReport*==
+==*4.Create a !BigQuery connection/data source in iReport*==
+==*5.Create a report*==
+==*6.Deploy the query executor report*==
+==*7.Deploy the report to !JasperReports Server*==
+==*8.Run the report*==
 
 = Details =
+Sign up for !BigQuery if your !BigQuery service is not activated else you may skip the instructions to signup for Big!Query.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+==*1. Sign Up for !BigQuery*==
+  * Log in to Google APIs Console.
+  * Create a new Google API project or choose an existing project.
+  * Navigate to services tab 
+  * Turn on the !BigQuery Service.
+  * Review the Terms and Services, if prompted.
+
+===*  Generate API Access ID*===
+  * Navigate to API Access Tab
+  * For a new project, generate !OAuth Client Id for any of your application types:Web Application,Service Account or Installed Application.Previously generated !OAuth Client Id can also be used.
+  * Take a note of the account email id,project id.
+  * Download the private key.
+
+For detailed steps on signing up for Big!Query refer to https://developers.google.com/bigquery/docs/getting-started
+
+==*2. Jaspersoft !BigQuery connector*==
+Download the following files present under download tab in current page:
+  * jrs-bigquery-0.0.1
+  * Jaspersoft-iReport-!BigQueryPlugin-0.0.1
+  * js-bigquery-datasource-0.0.1
+
+==*3. Deploy Jaspersoft !BigQuery connector to iReport*==
+  * Select Tool->Plugin
+  * Choose 'Downloaded' tab
+  * Click on Add Plugins and navigate to 'Jaspersoft-iReport-!BigQueryPlugin-0.0.1.nbm' file download location and select the file.
+  * Click on install in Plugins wizard to install the plugin.
+  * Restart the iReport Designer.
+
+==*4. Create a !BigQuery connection/data source in iReport*==
+  * Choose the Report Datasources button on the toolbar.
+  * Click on 'New'and select '!BigQuery Connection'
+  * Specify the name for the data source.
+  * Choose the private key from the other details obtained from the steps mentioned earlier.
+  * Click on 'Test' to test the connection for success.
+  
+==*5. Create a report*==
+  * Select File->New
+  * Choose any template and click "Launch Report Wizard".
+  * Set the report name and location.
+  * Create a query to retrieve data. Ensure if not using the sample datasets, create a dataset and table in Google Storage.
+==*6. Deploy the query executor report*==
+  * Copy the downloaded jar files into $JASPERSERVER_HOME/apache-tomcat/webapps/jasperserver-pro/WEB-INF/lib: js-bigquery-datasource-0.0.1.jar
+  Also the following files to the specified locations:
+
+  applicationContext-!BigQueryDataSource.xml to $JASPERSERVER_HOME/apache-tomcat/webapps/jasperserver-pro/WEB-IN
+  !BigQueryDataSource.properties to $JASPERSERVER_HOME/apache-tomcat/webapps/jasperserver-pro/WEB-INF/bundles
+  * Be sure to keep the folder structure when copying the files.
+  * Start or restart !JasperReports Server to apply the changes.
+==*7. Deploy the report to !JasperReports Server*==
+===*  Data Source*===
+  * Define the data source in !JasperReports Server
+  * Right-click a folder, add a Data Source
+  * Set the Data Source properties   
+===*  Report*===
+Use either the !JasperReports Server web interface or the iReport   Repository Navigator to deploy the report.
+
+Deploying the report to !JasperReports Server from iReport:
+  * In the !JasperReports Server Repository Window, create a new server
+  * Set the configuration properties for the server. Default organization name is organization_1
+  * Include the report to be deployed and click on publish.
+Deploying the report to !JasperReports Server using the web interface
+  * Login as a admin
+  * Right click on the Data Sources under Repository->Folders and select Add Resource->Data Source
+  * Set the properties for the Data Source
+==*8. Run the report*==
+Search for the report or browse to the report in the !JasperReports Server repository.
