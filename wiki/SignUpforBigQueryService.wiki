@@ -7,17 +7,26 @@ Sign Up for !BigQuery Service
 ==Sign Up for !BigQuery Service==
 ==1. !BigQuery Service Activation==
   1. Log in to the [https://code.google.com/apis/console Google APIs Console].
+
   2. Create a new Google APIs Console project or use an existing project.
+
   3. Navigate to the API Services table.
+
   4. Click on Services on the left-hand sidebar.
+
   5. Turn on !BigQuery.
+
   6. If prompted, review and agree the Terms of Service.
 
 ==2. Generating API Access ID==
+
   1. Navigate to the API Access on the left-hand sidebar.
+
   2. Generate OAuth !ClientId for 'Service Account' application type.You may also choose to use previously generated OAuth !ClientId and its private key for 'Service Account' application type.
+
   3. Download the private key 
-  4. Note down the following details to associate this credentials for Jaspersoft-BigQuery integration :
+
+  4. Note down the following details to associate this credentials for !Jaspersoft-BigQuery integration :
      * account email id
      * project id 
 Note:You can find project id in the Google APIs Console's url with the particular project chosen as your current project
