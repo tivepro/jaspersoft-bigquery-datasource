@@ -64,11 +64,11 @@ Download the following files present under download tab in current page:
   * Be sure to keep the folder structure when copying the files.
   * Start or restart !JasperReports Server to apply the changes.
 ==*7. Deploy the report to !JasperReports Server*==
-===*  Data Source*===
+===*   Data Source*===
   * Define the data source in !JasperReports Server
   * Right-click a folder, add a Data Source
   * Set the Data Source properties   
-===*  Report*===
+===*   Report*===
 Use either the !JasperReports Server web interface or the iReport   Repository Navigator to deploy the report.
 
 Deploying the report to !JasperReports Server from iReport:
