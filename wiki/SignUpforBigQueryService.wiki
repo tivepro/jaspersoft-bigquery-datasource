@@ -1,11 +1,11 @@
 = Introduction =
 Sign Up for !BigQuery Service
-1. !BigQuery Service Activation
-2. Generating API Access ID
+# !BigQuery Service Activation
+# Generating API Access ID
 
 = Details =
 == Sign Up for !BigQuery Service ==
-== 1. !BigQuery Service Activation ==
+== # !BigQuery Service Activation ==
 1. Log in to the [https://code.google.com/apis/console Google APIs Console].
 2. Create a new Google APIs Console project or use an existing project.
 3. Navigate to the API Services table.
