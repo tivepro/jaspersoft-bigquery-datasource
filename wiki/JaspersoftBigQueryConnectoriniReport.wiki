@@ -39,3 +39,8 @@ The simplest way for a new user to create a new report is with the Report Wizard
 3. Set the report name and location.
 
 4. Create a !BigQuery query to retrieve data.
+   * Use sampled dataset
+
+   * Use your own dataset
+
+For details on creating a new dataset or a new table in Google Storage refer to 'Create Table' [https://developers.google.com/bigquery/docs/hello_bigquery_gui here].
