@@ -1,0 +1,54 @@
+= Summary =
+*Deploying Report to !JasperReports Server*
+
+*1. Deploy query executor to !JasperReports Server*
+
+*2. Deploy the report to !JasperReports Server*
+
+= Details =
+
+== *Deploying Report to !JasperReports Server* ==
+
+== *1. Deploy query executor to !JasperReports Server* ==
+1. Copy the files in WEB-INF from step 1 into 
+
+<pre><appserver>/webapps/jasperserver-pro/WEB-INF</pre>
+
+Be sure to keep the folder structure when copying the files.
+
+2. Start or restart !JasperReports Server.
+
+== *2. Deploy the report to !JasperReports Server* ==
+
+=== *Data Source* ===
+1. Define the data source in !JasperReports Server
+
+2. Expand 'Folders'
+
+3. Right-click on 'Data Sources' and select 'Add Resource' to add Data Source
+
+4. Set the Data Source properties.   
+
+=== *Report* ===
+
+*Option 1: Deploy report using !JasperReports Server web interface*
+
+1. Login as a admin
+
+2. Right click on the Data Sources under Repository->Folders
+
+3. select Add Resource->Data Source
+
+4. Set the properties for the Data Source
+
+*Option 2: Deploy report to !JasperReports Server from iReport*
+
+1. Open !JasperReports Server Repository Window
+
+2. Create a new server.
+
+3. Set the configuration properties for the server. Default organization name is organization_1 
+
+Note: You can skip steps 2 and 3 If you have already configured a server.
+
+4.  Include the report to be deployed and click on publish.
