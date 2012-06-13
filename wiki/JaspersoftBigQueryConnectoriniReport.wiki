@@ -1,0 +1,41 @@
+= Summary =
+*Jaspersoft !BigQuery Connector in iReport*
+
+*1. Installation*
+
+*2. Define a Connection*
+
+*3. Create a Report*
+= Details =
+== *Jaspersoft !BigQuery Connector in iReport* ==
+== *1. Installation* ==
+1. Download the !BigQuery connector. This includes the plugin (!BigQuery-xxx.nbm).
+
+2. In iReport choose the menu Tools → Plugins.
+
+3. On the tab 'Downloaded' browse to the .nbm file then click 'Install'.
+
+4. Restart iReport and the connector will complete its installation.
+
+== *2. Define a Connection* ==
+
+1. Click the button "Report Datasources" to define a new connection to !BigQuery.
+
+2. Add a new datasource of type "!BigQuery Connection"
+
+3. Fill in the following details:
+   * account email id
+   * project id 
+   * private key  
+4. Test the connection.
+
+== *3. Create a Report* ==
+The simplest way for a new user to create a new report is with the Report Wizard.
+
+1. File → New...
+
+2. Choose any template and click "Launch Report Wizard".
+
+3. Set the report name and location.
+
+4. Create a !BigQuery query to retrieve data.
