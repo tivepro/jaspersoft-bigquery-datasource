@@ -2,6 +2,7 @@ package com.jaspersoft.bigquery.connection;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.InetAddress;
 import java.sql.Array;
 import java.sql.Blob;
 import java.sql.CallableStatement;
@@ -22,6 +23,8 @@ import java.util.Properties;
 
 import net.sf.jasperreports.engine.JRException;
 
+import org.apache.commons.net.ntp.NTPUDPClient;
+import org.apache.commons.net.ntp.TimeInfo;
 import org.apache.log4j.Logger;
 
 import com.google.api.client.googleapis.auth.oauth2.GoogleCredential;
@@ -52,6 +55,8 @@ public class BigQueryConnection implements Connection {
     private String projectId;
 
     private static final String APPLICATION_NAME = "Jaspersoft BigQuery Connector 0.0.2";
+
+    private final static String NTP_SERVER = "0.pool.ntp.org";
 
     private final Logger logger = Logger.getLogger(BigQueryConnection.class);
 
@@ -142,9 +147,27 @@ public class BigQueryConnection implements Connection {
         } catch (Throwable e) {
             if (e.getMessage() != null && e.getMessage().contains("unauthorized")) {
                 logger.error(e);
+                NTPUDPClient ntpClient = new NTPUDPClient();
+                TimeInfo timeInfo = null;
+                try {
+                    timeInfo = ntpClient.getTime(InetAddress.getByName(NTP_SERVER));
+                } catch (Throwable e1) {
+                    e1.printStackTrace();
+                } finally {
+                    ntpClient.close();
+                }
+                StringBuilder timeMessage = new StringBuilder();
+                timeMessage.append("Ensure your system clock is synchronized with a NTP server");
+                if (timeInfo != null) {
+                    timeInfo.computeDetails();
+                    timeMessage.append("\n: Current delay against \"");
+                    timeMessage.append(NTP_SERVER);
+                    timeMessage.append("\" is: ");
+                    timeMessage.append(timeInfo.getDelay());
+                }
                 throw new JRException(
                         "Unauthorized exception. Please review your serviceAccountId and privateKeyFilePath."
-                                + "Also ensure your system clock is synchronized with a NTC server");
+                                + timeMessage.toString());
             }
             throw new JRException(e);
         }

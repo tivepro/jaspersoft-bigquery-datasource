@@ -81,7 +81,7 @@ public class BigQueryConnectionFactory implements PoolableObjectFactory<BigQuery
                         && (projectId == null ? true : projectId.equals(connection.getProjectId()))
                         && (connection.test() != null);
             } catch (JRException e) {
-                logger.error(e);
+                e.printStackTrace();
             }
         }
         return false;
