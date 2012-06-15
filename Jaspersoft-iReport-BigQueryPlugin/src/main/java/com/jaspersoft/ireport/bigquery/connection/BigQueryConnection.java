@@ -160,7 +160,7 @@ public class BigQueryConnection extends JDBCConnection implements WizardFieldsPr
             errorMessage = "A connection could not be created. Please review the IDE log";
         } catch (Exception e) {
             e.printStackTrace();
-            errorMessage = String.valueOf(e);
+            errorMessage = String.valueOf(e) + "\nVerify IDE log";
         } finally {
             if (connection != null) {
                 Installer.getConnectionManager().returnConnection(connection);
