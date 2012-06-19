@@ -56,14 +56,13 @@ Download the following files present under download tab in current page:
   * Choose any template and click "Launch Report Wizard".
   * Set the report name and location.
   * Create a query to retrieve data. Ensure if not using the sample datasets, create a dataset and table in Google Storage.
-==*6. Deploy the query executor report*==
-  * Copy the downloaded jar files into $JASPERSERVER_HOME/apache-tomcat/webapps/jasperserver-pro/WEB-INF/lib: js-bigquery-datasource-0.0.1.jar
-  Also the following files to the specified locations:
 
-  applicationContext-!BigQueryDataSource.xml to $JASPERSERVER_HOME/apache-tomcat/webapps/jasperserver-pro/WEB-IN
-  !BigQueryDataSource.properties to $JASPERSERVER_HOME/apache-tomcat/webapps/jasperserver-pro/WEB-INF/bundles
+==*6. Deploy the connector to !JasperReports Server*==
+  * Unzip [https://code.google.com/p/jaspersoft-bigquery-datasource/downloads/detail?name=jrs-bigquery-0.0.2.zip jrs-bigquery-0.0.2.zip]
+  * Copy the unzipped files files into .../webapps/jasperserver-pro/WEB-INF/
   * Be sure to keep the folder structure when copying the files.
   * Start or restart !JasperReports Server to apply the changes.
+
 ==*7. Deploy the report to !JasperReports Server*==
 ===*Data Source*===
   * Define the data source in !JasperReports Server
