@@ -42,7 +42,7 @@ Be sure to keep the folder structure when copying the files.
 4. Set the properties for the Data Source
 
 Note: 
-1. The private key file path property points to a reference location local to the Jaspersoft Server.If running on a distributed setup make sure to have a local copy of the private key file on the the Jaspersoft Server location and reference it to locally with absolute path.
+1. The private key file path property points to a reference location local to the Jaspersoft Server.If running on a distributed setup make sure to have a local copy of the private key file on the Jaspersoft Server location and reference it with an absolute path.
 
 *Option 2: Deploy report to !JasperReports Server from iReport*
 
