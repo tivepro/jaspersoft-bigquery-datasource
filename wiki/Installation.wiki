@@ -16,10 +16,10 @@ Installing and Configuring the Jaspersoft !BigQuery Connector
 = Details =
 
 ==*1. Sign up for !BigQuery*==
-See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/SignUpforBigQueryService Sign up for !BigQuery] for details.
+See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/SignUpforBigQueryService Sign up for BigQuery] for details.
 
 Note:
-Existing !BigQuery users may skip 'Sign up for !BigQuery Service' section but are adviced to refer to 'Generate API Access ID' subsection for instructions on the properties needed for Jaspersoft-!BigQuery Datasource connection.
+Existing !BigQuery users may skip 'Sign up for !BigQuery Service' section in the above link but are adviced to refer to 'Generate API Access ID' subsection for instructions on the properties needed for Jaspersoft-!BigQuery Datasource connection.
 
 ==*2. Jaspersoft !BigQuery connector*==
 Download the following files present under download tab in current page:
