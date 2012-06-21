@@ -8,7 +8,7 @@ Installing and Configuring the Jaspersoft !BigQuery Connector
   # Download Jaspersoft !BigQuery connector
   # Installing Jaspersoft !BigQuery connector
   # Create a iReport
-  # Deploy the connector and iReport to !JasperReports Server
+  # Deploy Jaspersoft BigQuery connector and iReport to !JasperReports Server
 
 = Details =
 
