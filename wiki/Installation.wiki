@@ -7,7 +7,6 @@ Installing and Configuring the Jaspersoft !BigQuery Connector
   # Sign up for !BigQuery
   # Download Jaspersoft !BigQuery connector
   # Deploy Jaspersoft !BigQuery connector to iReport
-  # Create a !BigQuery connection/data source in iReport
   # Create a report
   # Deploy the query executor report
   # Deploy the report to !JasperReports Server
@@ -27,33 +26,11 @@ Download the following files from the project [https://code.google.com/p/jaspers
   * Jaspersoft-iReport-!BigQueryPlugin-X.X.X
   * js-bigquery-datasource-X.X.X
 
-==*3. Deploy Jaspersoft !BigQuery connector*==
- See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/JaspersoftBigQueryConnectoriniReport Jaspersoft BigQuery Connector Deployment in iReport] for details.
+==*3. Jaspersoft !BigQuery connector Installation*==
+ See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/JaspersoftBigQueryConnectoriniReport Jaspersoft BigQuery Connector Installation in iReport] for details.
 
 ==*4. Create a iReport*==
  See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/CreateiReport Create a iReport] for details.
 
-==*6. Deploy the connector to !JasperReports Server*==
-  * Unzip [https://code.google.com/p/jaspersoft-bigquery-datasource/downloads/detail?name=jrs-bigquery-0.0.2.zip jrs-bigquery-0.0.2.zip]
-  * Copy the unzipped files files into .../webapps/jasperserver-pro/WEB-INF/
-  * Be sure to keep the folder structure when copying the files.
-  * Start or restart !JasperReports Server to apply the changes.
-
-==*7. Deploy the report to !JasperReports Server*==
-===*Data Source*===
-  * Define the data source in !JasperReports Server
-  * Right-click a folder, add a Data Source
-  * Set the Data Source properties   
-===*Report*===
-Use either the !JasperReports Server web interface or the iReport   Repository Navigator to deploy the report.
-
-Deploying the report to !JasperReports Server from iReport:
-  * In the !JasperReports Server Repository Window, create a new server
-  * Set the configuration properties for the server. Default organization name is organization_1
-  * Include the report to be deployed and click on publish.
-Deploying the report to !JasperReports Server using the web interface
-  * Login as a admin
-  * Right click on the Data Sources under Repository->Folders and select Add Resource->Data Source
-  * Set the properties for the Data Source
-==*8. Run the report*==
-Search for the report or browse to the report in the !JasperReports Server repository.
+==*5. Deploy the connector and iReport to !JasperReports Server*==
+ See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/DeployReporttoJasperReportsServer Deploying iReport to JasperReport Server] for details.  
