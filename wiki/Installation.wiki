@@ -15,7 +15,7 @@ Installing and Configuring the Jaspersoft !BigQuery Connector
 
 = Details =
 
-
+==*1. Sign up for !BigQuery*==
 See instructions [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/SignUpforBigQueryService].
 
 Note:
