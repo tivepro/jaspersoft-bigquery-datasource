@@ -3,7 +3,7 @@
 
 *1. Deploy query executor to !JasperReports Server*
 
-*2. Deploy the report to !JasperReports Server*
+*2. Deploy report to !JasperReports Server*
 
 = Details =
 
@@ -40,6 +40,9 @@ Be sure to keep the folder structure when copying the files.
 3. select Add Resource->Data Source
 
 4. Set the properties for the Data Source
+
+Note: 
+1. The private key file path property points to a reference location local to the Jaspersoft Server.If running on a distributed setup make sure to have a local copy of the private key file on the the Jaspersoft Server location and reference it to locally with absolute path.
 
 *Option 2: Deploy report to !JasperReports Server from iReport*
 
