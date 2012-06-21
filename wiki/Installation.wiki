@@ -30,6 +30,9 @@ Download the following files from the project [https://code.google.com/p/jaspers
 ==*3. Deploy Jaspersoft !BigQuery connector*==
  See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/JaspersoftBigQueryConnectoriniReport Jaspersoft BigQuery Connector Deployment in iReport] for details.
 
+==*4. Create a iReport*==
+ See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/CreateiReport Create a iReport] for details.
+
 ==*6. Deploy the connector to !JasperReports Server*==
   * Unzip [https://code.google.com/p/jaspersoft-bigquery-datasource/downloads/detail?name=jrs-bigquery-0.0.2.zip jrs-bigquery-0.0.2.zip]
   * Copy the unzipped files files into .../webapps/jasperserver-pro/WEB-INF/
