@@ -14,23 +14,12 @@ Installing and Configuring the Jaspersoft !BigQuery Connector
   # Run the report
 
 = Details =
-Sign up for !BigQuery if your !BigQuery service is not activated else you may skip the instructions to signup for Big!Query.
 
-==*1. Sign Up for !BigQuery*==
-  * Log in to Google APIs Console.
-  * Create a new Google API project or choose an existing project.
-  * Navigate to services tab 
-  * Turn on the !BigQuery Service.
-  * Review the Terms and Services, if prompted.
 
-===*  Generate API Access ID*===
-  * Navigate to API Access Tab
-  * For a new project, generate !OAuth Client Id for any of your application types:Web Application,Service Account or Installed Application.Previously generated !OAuth Client Id can also be used.
-  * Take a note of the account email id,project id.
-  * Download the private key.
+See instructions [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/SignUpforBigQueryService].
 
-For detailed steps on signing up for Big!Query refer to https://developers.google.com/bigquery/docs/getting-started
-
+Note:
+Existing BigQuery users may skip 'Sign up for BigQuery Service' section but are adviced to refer to 'Generate API Access ID' subsection for instructions on the properties needed for Jaspersoft-BigQuery Datasource connection.
 ==*2. Jaspersoft !BigQuery connector*==
 Download the following files present under download tab in current page:
   * jrs-bigquery-0.0.1
