@@ -31,7 +31,12 @@ https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/ReportD
    * account email id
    * project id 
    * private key  
+
+https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/BigQueryConnection.png
+
 4. Test the connection.
+
+https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/BigQueryConnection_test.png
 
 == *3. Create a Report* ==
 The simplest way for a new user to create a new report is with the Report Wizard.
