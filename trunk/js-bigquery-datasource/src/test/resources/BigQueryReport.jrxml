@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BigQueryReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BigQueryReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6e4c9924-139f-4a45-967c-f68841c90cba">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
+	<parameter name="COUNT_LIST" class="java.util.Collection">
+		<defaultValueExpression><![CDATA[java.util.Arrays.asList(new Integer[]{22, 33})]]></defaultValueExpression>
+	</parameter>
 	<queryString language="BigQuery">
 		<![CDATA[SELECT word, word_count
 FROM publicdata:samples.shakespeare
-ORDER BY word_count desc, word
-LIMIT 10]]>
+WHERE $X{IN, word_count, COUNT_LIST}
+LIMIT 100]]>
 	</queryString>
 	<field name="word" class="java.lang.String"/>
 	<field name="word_count" class="java.lang.Integer"/>
 	<title>
 		<band height="79" splitType="Stretch">
 			<staticText>
-				<reportElement x="119" y="15" width="316" height="49"/>
+				<reportElement uuid="1b4e915b-6c43-49fd-afc1-fa34b49c5a74" x="119" y="15" width="316" height="49"/>
 				<textElement>
 					<font size="36" isBold="true"/>
 				</textElement>
@@ -25,12 +28,12 @@ LIMIT 10]]>
 	<columnHeader>
 		<band height="20" splitType="Stretch">
 			<staticText>
-				<reportElement x="47" y="0" width="225" height="20"/>
+				<reportElement uuid="cff1bbdd-a3cb-4bf0-8357-7e9ecea2c678" x="47" y="0" width="225" height="20"/>
 				<textElement/>
 				<text><![CDATA[word]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="310" y="0" width="140" height="20"/>
+				<reportElement uuid="6dce96a5-856d-4327-802b-4f6689aa2a15" x="310" y="0" width="140" height="20"/>
 				<textElement/>
 				<text><![CDATA[word_count]]></text>
 			</staticText>
@@ -39,12 +42,12 @@ LIMIT 10]]>
 	<detail>
 		<band height="20" splitType="Stretch">
 			<textField>
-				<reportElement x="47" y="0" width="225" height="20"/>
+				<reportElement uuid="ccf8415e-a755-40fe-b20e-2921892855ee" x="47" y="0" width="225" height="20"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{word}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="310" y="0" width="140" height="20"/>
+				<reportElement uuid="d7b23c2a-ac47-4176-a18b-2d6d42844cbb" x="310" y="0" width="140" height="20"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{word_count}]]></textFieldExpression>
 			</textField>
