@@ -1,3 +1,4 @@
+#summary New users should start with this page.
 #labels Featured
 = Installation =
 
