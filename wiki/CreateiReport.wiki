@@ -1,5 +1,5 @@
 = Summary =
-*Create a iReport*
+*Create a Report*
 
 *1. Create a Report*
 = Details =
