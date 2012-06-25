@@ -2,13 +2,15 @@ package com.jaspersoft.bigquery.query;
 
 import java.util.Map;
 
+import net.sf.jasperreports.engine.DefaultJasperReportsContext;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRDataset;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRParameter;
 import net.sf.jasperreports.engine.JRRuntimeException;
 import net.sf.jasperreports.engine.JRValueParameter;
-import net.sf.jasperreports.engine.query.JRAbstractQueryExecuter;
+import net.sf.jasperreports.engine.JasperReportsContext;
+import net.sf.jasperreports.engine.query.JRJdbcQueryExecuter;
 
 import org.apache.log4j.Logger;
 
@@ -22,7 +24,7 @@ import com.jaspersoft.bigquery.connection.BigQueryConnection;
  * @author Eric Diaz
  * 
  */
-public class BigQueryQueryExecuter extends JRAbstractQueryExecuter {
+public class BigQueryQueryExecuter extends JRJdbcQueryExecuter {
 
     private final static Logger logger = Logger.getLogger(BigQueryQueryExecuter.class);
 
@@ -31,9 +33,18 @@ public class BigQueryQueryExecuter extends JRAbstractQueryExecuter {
     private BigQueryQueryWrapper wrapper;
 
     public BigQueryQueryExecuter(JRDataset dataset, Map<String, ? extends JRValueParameter> parameters) {
-        super(dataset, parameters);
+        this(DefaultJasperReportsContext.getInstance(), dataset, parameters);
+    }
+
+    public BigQueryQueryExecuter(JasperReportsContext jasperReportsContext, JRDataset dataset,
+            Map<String, ? extends JRValueParameter> parameters) {
+        super(jasperReportsContext, dataset, parameters);
         this.parameters = parameters;
-        parseQuery();
+    }
+
+    protected void registerFunctions() {
+        registerClauseFunction(CLAUSE_ID_IN, BigQueryInClause.instance());
+        registerClauseFunction(CLAUSE_ID_NOTIN, BigQueryNotInClause.instance());
     }
 
     /**
@@ -70,14 +81,13 @@ public class BigQueryQueryExecuter extends JRAbstractQueryExecuter {
             }
             connection = (BigQueryConnection) value;
         }
-
         wrapper = new BigQueryQueryWrapper(connection, getQueryString());
         return new BigQueryDataSource(wrapper);
 
     }
 
     /**
-     * Replacement of parameters
+     * Parameters replacement
      */
     @Override
     protected String getParameterReplacement(String parameterName) {
@@ -88,6 +98,7 @@ public class BigQueryQueryExecuter extends JRAbstractQueryExecuter {
         if (parameterValue instanceof JRValueParameter) {
             parameterValue = ((JRValueParameter) parameterValue).getValue();
         }
+        System.out.println("Parameter value: " + parameterValue);
         return String.valueOf(parameterValue);
     }
 

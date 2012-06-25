@@ -3,6 +3,7 @@ package com.jaspersoft.bigquery.connection;
 import java.io.File;
 import java.io.IOException;
 import java.net.InetAddress;
+import java.net.URL;
 import java.sql.Array;
 import java.sql.Blob;
 import java.sql.CallableStatement;
@@ -78,7 +79,12 @@ public class BigQueryConnection implements Connection {
     private void create() throws Throwable {
         File privateKeyFile = new File(privateKeyFilePath);
         if (!privateKeyFile.exists()) {
-            throw new JRException("The file \"" + privateKeyFilePath + "\" doesn't exist");
+            logger.warn("File \"" + privateKeyFilePath + "\" doesn't seem to be a full path. Trying the classpath");
+            URL resource = getClass().getClassLoader().getResource(privateKeyFilePath);
+            if (resource == null) {
+                throw new JRException("The file \"" + privateKeyFilePath + "\" doesn't exist");
+            }
+            privateKeyFile = new File(resource.getPath());
         }
         GoogleCredential credential = new GoogleCredential.Builder().setTransport(transport)
                 .setJsonFactory(jsonFactory).setServiceAccountId(serviceAccountId)
@@ -145,7 +151,7 @@ public class BigQueryConnection implements Connection {
                 return builder.toString();
             }
         } catch (Throwable e) {
-            if (e.getMessage() != null && e.getMessage().contains("unauthorized")) {
+            if (e.getMessage() != null && e.getMessage().toLowerCase().contains("unauthorized")) {
                 logger.error(e);
                 NTPUDPClient ntpClient = new NTPUDPClient();
                 TimeInfo timeInfo = null;
