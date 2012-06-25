@@ -15,11 +15,15 @@
 
 3. On the tab 'Downloaded' browse to the .nbm file then click 'Install'.
 
+https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/BigQueryPlugin.png
+
 4. Restart iReport and the connector will complete its installation.
 
 == *2. Define a Connection* ==
 
 1. Click the button "Report Datasources" to define a new connection to !BigQuery.
+
+https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/ReportDatasources.PNG
 
 2. Add a new datasource of type "!BigQuery Connection"
 
