@@ -2,17 +2,19 @@
 
 = Installing and configuring Jaspersoft !BigQuery Connector =
 
-* Activating Google !BigQuery Service*
+=*Summary*=
 
-* Download Jaspersoft !BigQuery connector*
+* 1. Activating Google !BigQuery Service*
 
-* Installing Jaspersoft !BigQuery Plugin for iReport*
+* 2. Download Jaspersoft !BigQuery connector*
 
-* Creating a report in iReport*
+* 3. Installing Jaspersoft !BigQuery Plugin for iReport*
 
-* Deploying Jaspersoft !BigQuery connector to !JasperReports Server*
+* 4. Creating a report in iReport*
 
-* Publishing a Report*
+* 5. Deploying Jaspersoft !BigQuery connector to !JasperReports Server*
+
+* 6. Publishing a Report*
 
 = Details =
 
