@@ -5,7 +5,7 @@
 
 *1. Create a Report*
 = Details =
-== *Create a Report* ==
+== *Create a Report in Jaspersoft iReport using !BigQuery !DataSource* ==
 == *1. Create a Report* ==
 The simplest way for a new user to create a new report is with the iReport's Report Wizard.
 
