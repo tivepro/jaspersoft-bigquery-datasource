@@ -1,4 +1,4 @@
-#summary Configuring JasperReports Server to add a Query Executor
+#summary Configuring JasperReports Server
 = Summary =
 *Configuring !JasperReports Server*
 
