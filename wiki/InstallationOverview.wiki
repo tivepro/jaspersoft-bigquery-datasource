@@ -6,9 +6,9 @@ Installing and configuring Jaspersoft !BigQuery Connector
 = Summary =
   # Activating Google !BigQuery Service
   # Download Jaspersoft !BigQuery connector
-  # Installing Jaspersoft !BigQuery connector
-  # Creating a iReport
-  # Deploy Jaspersoft !BigQuery connector and iReport to !JasperReports Server
+  # Installing Jaspersoft !BigQuery connector in iReport
+  # Creating a report in iReport
+  # Deploying Jaspersoft !BigQuery connector to JasperReports Server
   # Publishing a Report
 
 = Details =
@@ -27,13 +27,13 @@ The following files are included:
   * Jaspersoft-iReport-!BigQueryPlugin-X.X.X
   * js-bigquery-datasource-X.X.X
 
-==*3. Installing Jaspersoft !BigQuery connector*==
+==*3. Installing Jaspersoft !BigQuery connector in iReport*==
  See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ConfiguringiReport Configuring iReport] for details.
 
-==*4. Create a Report*==
+==*4. Creating a report in iReport*==
  See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ReportCreation Creating a JasperReport] for details.
 
-==*5. Deploy the connector and iReport to !JasperReports Server*==
+==*5. Deploying Jaspersoft !BigQuery connector to JasperReports Server*==
  See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ConfiguringJasperReportsServer Configuring JasperReports Server] for details.  
 
 ==*6. Publishing a Report*==
