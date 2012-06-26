@@ -1,4 +1,4 @@
-#sumary Configuring iReport
+#summary Configuring iReport
 = Summary =
 *Configuring iReport*
 
