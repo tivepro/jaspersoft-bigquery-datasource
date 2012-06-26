@@ -13,7 +13,7 @@ Installing and configuring Jaspersoft !BigQuery Connector
 
 = Details =
 
-==*1. Activating Google BigQuery Service*==
+==*1. Activating Google !BigQuery Service*==
 See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ActivatingBigQueryService Activating Google BigQuery Service] for details.
 
 Note:
