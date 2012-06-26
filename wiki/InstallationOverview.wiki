@@ -9,6 +9,7 @@
 === Deploying Jaspersoft !BigQuery connector to !JasperReports Server===
 === Publishing a Report===
 
+
 = Details =
 
 ==* Activating Google !BigQuery Service==
