@@ -1,4 +1,4 @@
-#summary Creating a report in iReport with BigQuery datasource
+#summary Creating a report in iReport
 
 = Summary =
 *Create a Report in Jaspersoft iReport using !BigQuery !DataSource*
