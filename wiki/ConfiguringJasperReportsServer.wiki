@@ -1,0 +1,35 @@
+#summary Configuring JasperReportsServer to deploy Query Executor
+= Summary =
+*Configuring !JasperReports Server*
+
+*1. Deploy query executor to !JasperReports Server*
+
+*2. Deploy report to !JasperReports Server*
+
+= Details =
+
+== *Configuring !JasperReports Server* ==
+
+== *1. Deploy query executor to !JasperReports Server* ==
+1. Copy the files in WEB-INF from step 1 into 
+
+<pre><appserver>/webapps/jasperserver-pro/WEB-INF</pre>
+
+Be sure to keep the folder structure when copying the files.
+
+2. Start or restart !JasperReports Server.
+
+== *2. Deploy the report to !JasperReports Server* ==
+
+=== *Data Source* ===
+1. Define the data source in !JasperReports Server
+
+2. Expand 'Folders'
+
+3. Right-click on 'Data Sources' and select 'Add Resource' to add Data Source
+
+https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/JRS_AddResource.png
+
+4. Set the Data Source properties.   
+
+https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/JRS_BigQueryDataSource.png
