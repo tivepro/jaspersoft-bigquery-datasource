@@ -31,4 +31,4 @@ Download the following files from the project [https://code.google.com/p/jaspers
  See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/CreateiReport Create a iReport] for details.
 
 ==*5. Deploy the connector and iReport to !JasperReports Server*==
- See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/DeployReporttoJasperReportsServer Deploying iReport to JasperReport Server] for details.  
+ See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/DeployReporttoJasperReportsServer Deploying Report to JasperReport Server] for details.  
