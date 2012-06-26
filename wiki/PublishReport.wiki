@@ -1,4 +1,4 @@
-#summary Publish a report in JasperReports Server
+#summary Publishing a report in JasperReports Server
 
 = Summary =
 *Publish a Report in !JasperReports Server*
