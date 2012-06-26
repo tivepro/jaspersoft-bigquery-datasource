@@ -27,7 +27,7 @@ The following files are included:
   * Jaspersoft-iReport-!BigQueryPlugin-X.X.X
   * js-bigquery-datasource-X.X.X
 
-==*3. Installing Jaspersoft !BigQuery connector in iReport*==
+==*3. Installing Jaspersoft !BigQuery Plugin for iReport*==
  See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ConfiguringiReport Configuring iReport] for details.
 
 ==*4. Creating a report in iReport*==
