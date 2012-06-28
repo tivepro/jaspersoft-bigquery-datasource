@@ -27,7 +27,7 @@ https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/ReportD
 
 2. Add a new datasource of type "!BigQuery Connection"
 
-3. Fill in the following details:
+3. Fill in the following details pertaining to your Google APIs Console project:
    * account email id
    * project id 
    * private key  
