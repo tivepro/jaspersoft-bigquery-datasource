@@ -24,7 +24,7 @@ import com.jaspersoft.bigquery.query.BigQueryQueryExecuter;
 /**
  * 
  * @author Eric Diaz
- * 
+ * Extra comment to test svn checkin
  */
 public class ConnectionTest {
 
