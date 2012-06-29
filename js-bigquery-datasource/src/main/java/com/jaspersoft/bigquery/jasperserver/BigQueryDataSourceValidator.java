@@ -34,12 +34,22 @@ import com.jaspersoft.jasperserver.api.metadata.jasperreports.domain.CustomRepor
  * 
  */
 public class BigQueryDataSourceValidator implements CustomDataSourceValidator {
-  @Override
-  public void validatePropertyValues(CustomReportDataSource customReportDataSource, Errors errors) {
-    Map<?, ?> propertyMap = customReportDataSource.getPropertyMap();
-    String mongoURI = (String) propertyMap.get("mongoURI");
-    if (mongoURI == null || mongoURI.length() == 0) {
-      errors.rejectValue("reportDataSource.propertyMap[mongoURI]", "MongoDbDataSource.mongoURI.required");
+    @Override
+    public void validatePropertyValues(CustomReportDataSource customReportDataSource, Errors errors) {
+        Map<?, ?> propertyMap = customReportDataSource.getPropertyMap();
+        String serviceAccountId = (String) propertyMap.get("serviceAccountId");
+        if (serviceAccountId == null || serviceAccountId.length() == 0) {
+            errors.rejectValue("reportDataSource.propertyMap[serviceAccountId]",
+                    "BigQueryDataSource.serviceAccountId.required");
+        }
+        String privateKeyFilePath = (String) propertyMap.get("privateKeyFilePath");
+        if (privateKeyFilePath == null || privateKeyFilePath.length() == 0) {
+            errors.rejectValue("reportDataSource.propertyMap[privateKeyFilePath]",
+                    "BigQueryDataSource.privateKeyFilePath.required");
+        }
+        String projectId = (String) propertyMap.get("projectId");
+        if (projectId == null || projectId.length() == 0) {
+            errors.rejectValue("reportDataSource.propertyMap[projectId]", "BigQueryDataSource.projectId.required");
+        }
     }
-  }
 }

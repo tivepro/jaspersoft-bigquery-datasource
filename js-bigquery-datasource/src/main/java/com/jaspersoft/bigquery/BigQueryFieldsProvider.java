@@ -50,6 +50,10 @@ public class BigQueryFieldsProvider {
                 BigQueryParameter newParameter = new BigQueryParameter(parameterName, parameterValue);
                 newValueParameters.put(parameterName, newParameter);
             }
+            if (!parameters.containsKey(JRParameter.REPORT_CONNECTION)) {
+                newValueParameters.put(JRParameter.REPORT_CONNECTION, new BigQueryParameter(
+                        JRParameter.REPORT_CONNECTION, connection));
+            }
             parameters.clear();
             parameters.put(JRParameter.REPORT_CONNECTION, connection);
             newValueParameters.put(JRParameter.REPORT_PARAMETERS_MAP, new BigQueryParameter(

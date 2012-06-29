@@ -21,15 +21,10 @@
 
 package com.jaspersoft.bigquery.jasperserver;
 
-import java.util.Map;
-
 import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JRParameter;
 
 import org.apache.log4j.Logger;
 
-import com.jaspersoft.bigquery.connection.BigQueryConnection;
-import com.jaspersoft.bigquery.connection.BigQueryConnectionManager;
 import com.jaspersoft.jasperserver.api.metadata.jasperreports.service.CustomReportDataSourceService;
 
 /**
@@ -37,70 +32,14 @@ import com.jaspersoft.jasperserver.api.metadata.jasperreports.service.CustomRepo
  * @author Eric Diaz
  * 
  */
-public class BigQueryDataSourceService implements CustomReportDataSourceService {
+public class BigQueryDataSourceService extends BigQueryDataSourceService45 implements CustomReportDataSourceService {
     private final static Logger logger = Logger.getLogger(BigQueryDataSourceService.class);
-
-    private BigQueryConnection connection;
-
-    private String serviceAccountId;
-
-    private String privateKeyFilePath;
-
-    private String projectId;
-
-    private BigQueryConnectionManager connectionManager;
-
-    /**
-     * Returns the active connection to the pool
-     */
-    @Override
-    public void closeConnection() {
-        if (logger.isDebugEnabled()) {
-            logger.debug("BigQuery connection close requested");
-        }
-        if (connectionManager != null && connection != null) {
-            connectionManager.returnConnection(connection);
-            connection = null;
-            if (logger.isDebugEnabled()) {
-                logger.debug("BigQuery connection returned");
-            }
-        }
-    }
-
-    /**
-     * Creates a new connection base on the parameters set
-     */
-    @SuppressWarnings({ "unchecked", "rawtypes" })
-    @Override
-    public void setReportParameterValues(Map parameters) {
-        try {
-            createConnection();
-            parameters.put(JRParameter.REPORT_CONNECTION, connection);
-        } catch (Exception e) {
-            logger.error(e);
-        }
-    }
-
-    private void createConnection() throws JRException {
-        if (connection != null) {
-            closeConnection();
-        }
-        connectionManager.setServiceAccountId(serviceAccountId);
-        connectionManager.setPrivateKeyFilePath(privateKeyFilePath);
-        connectionManager.setProjectId(projectId);
-        try {
-            connection = connectionManager.borrowConnection();
-            if (logger.isDebugEnabled()) {
-                logger.debug("BigQuery connection created");
-            }
-        } catch (Exception e) {
-            logger.error(e);
-            throw new JRException(e.getMessage());
-        }
-    }
 
     @Override
     public boolean testConnection() throws JRException {
+        if (logger.isDebugEnabled()) {
+            logger.debug("Testing connection");
+        }
         try {
             createConnection();
             if (connection == null) {
@@ -111,37 +50,5 @@ public class BigQueryDataSourceService implements CustomReportDataSourceService 
         } finally {
             closeConnection();
         }
-    }
-
-    public void setPrivateKeyFilePath(String privateKeyFilePath) {
-        this.privateKeyFilePath = privateKeyFilePath;
-    }
-
-    public void setServiceAccountId(String serviceAccountId) {
-        this.serviceAccountId = serviceAccountId;
-    }
-
-    public void setProjectId(String projectId) {
-        this.projectId = projectId;
-    }
-
-    public String getPrivateKeyFilePath() {
-        return privateKeyFilePath;
-    }
-
-    public String getServiceAccountId() {
-        return serviceAccountId;
-    }
-
-    public String getProjectId() {
-        return projectId;
-    }
-
-    public void setConnectionManager(BigQueryConnectionManager connectionManager) {
-        this.connectionManager = connectionManager;
-    }
-
-    public BigQueryConnectionManager getConnectionManager() {
-        return connectionManager;
     }
 }

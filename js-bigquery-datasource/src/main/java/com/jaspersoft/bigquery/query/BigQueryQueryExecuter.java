@@ -2,14 +2,12 @@ package com.jaspersoft.bigquery.query;
 
 import java.util.Map;
 
-import net.sf.jasperreports.engine.DefaultJasperReportsContext;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRDataset;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRParameter;
 import net.sf.jasperreports.engine.JRRuntimeException;
 import net.sf.jasperreports.engine.JRValueParameter;
-import net.sf.jasperreports.engine.JasperReportsContext;
 import net.sf.jasperreports.engine.query.JRJdbcQueryExecuter;
 
 import org.apache.log4j.Logger;
@@ -33,12 +31,7 @@ public class BigQueryQueryExecuter extends JRJdbcQueryExecuter {
     private BigQueryQueryWrapper wrapper;
 
     public BigQueryQueryExecuter(JRDataset dataset, Map<String, ? extends JRValueParameter> parameters) {
-        this(DefaultJasperReportsContext.getInstance(), dataset, parameters);
-    }
-
-    public BigQueryQueryExecuter(JasperReportsContext jasperReportsContext, JRDataset dataset,
-            Map<String, ? extends JRValueParameter> parameters) {
-        super(jasperReportsContext, dataset, parameters);
+        super(dataset, parameters);
         this.parameters = parameters;
     }
 
