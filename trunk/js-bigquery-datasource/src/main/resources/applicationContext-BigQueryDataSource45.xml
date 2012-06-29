@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+	<bean id="BigQueryDataSource"
+		class="com.jaspersoft.jasperserver.api.engine.jasperreports.util.CustomDataSourceDefinition">
+		<property name="factory" ref="customDataSourceServiceFactory" />
+		<property name="name" value="BigQueryDataSource" />
+		<property name="serviceClassName"
+			value="com.jaspersoft.bigquery.jasperserver.BigQueryDataSourceService45" />
+		<property name="validator">
+			<bean
+				class="com.jaspersoft.bigquery.jasperserver.BigQueryDataSourceValidator" />
+		</property>
+		<property name="propertyDefinitions">
+			<list>
+				<map>
+					<entry key="name" value="serviceAccountId" />
+					<entry key="default" value="XXXXXX@developer.gserviceaccount.com" />
+				</map>
+				<map>
+					<entry key="name" value="privateKeyFilePath" />
+					<entry key="default" value="PATH_TO_FILE.p12" />
+				</map>
+				<map>
+					<entry key="name" value="projectId" />
+					<entry key="default" value="12345" />
+				</map>
+				<map>
+					<entry key="name" value="connectionManager" />
+					<entry key="hidden" value="true" />
+					<entry key="default">
+						<ref bean="BigQueryConnectionManager" />
+					</entry>
+				</map>
+			</list>
+		</property>
+		<property name="queryExecuterMap">
+			<map>
+				<entry key="BigQueryQuery"
+					value="com.jaspersoft.bigquery.query.BigQueryQueryExecuterFactory" />
+			</map>
+		</property>
+	</bean>
+
+	<bean
+		class="com.jaspersoft.jasperserver.api.common.util.spring.GenericBeanUpdater">
+		<property name="definition" ref="addMessageCatalog" />
+		<property name="value">
+			<list>
+				<value>WEB-INF/bundles/BigQueryDataSource</value>
+			</list>
+		</property>
+		<property name="valueType" value="stringList" />
+	</bean>
+
+	<bean name="BigQueryConnectionManager"
+		class="com.jaspersoft.bigquery.connection.BigQueryConnectionManager"
+		destroy-method="shutdown">
+		<!-- <property name="maxIdle" value="" /> -->
+		<!-- <property name="minIdle" value="" /> -->
+		<!-- <property name="maxActive" value="" /> -->
+	</bean>
+</beans>
