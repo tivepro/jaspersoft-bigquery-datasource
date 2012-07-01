@@ -24,7 +24,8 @@ See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ActivatingBig
 Note:
 Existing !BigQuery users may skip 'Sign up for !BigQuery Service' section in the above link but are adviced to refer to 'Generate API Access ID' subsection for instructions on the properties needed for establishing a Jaspersoft-!BigQuery Datasource connection.
 
-#sidebar DownloadConnector
+#DownloadConnector
+
 ==*2. Download Jaspersoft !BigQuery connector*==
 Download the following files from the project [https://code.google.com/p/jaspersoft-bigquery-datasource/].
 
