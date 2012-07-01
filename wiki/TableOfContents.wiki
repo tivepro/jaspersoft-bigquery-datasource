@@ -1,4 +1,4 @@
 * Introduction
-    * [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/IntroductionOverview Introduction Overview]
+    * [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ InstallationOverview  Installation Overview]
       * [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ActivatingBigQueryService Activating Google BigQuery Service]
       * [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/IntroductionOverview Download Jaspersoft BigQuery Plugin Installation]
