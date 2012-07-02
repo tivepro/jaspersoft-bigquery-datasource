@@ -3,6 +3,6 @@
 *[InstallationOverview Installation Overview]
   * [ActivatingBigQueryService Activating Google BigQuery Service]
   * [InstallationOverview#DownloadConnector Download BigQuery Connector]
-  * [ConfiguringiReport Configuring iReport]
-  * [ReportCreation Creating a JasperReport]
+  * [ConfiguringiReport Jaspersoft BigQuery Plugin Installation]
+  * [ReportCreation Creating a Report]
   * [PublishReport Publishing a Report]
