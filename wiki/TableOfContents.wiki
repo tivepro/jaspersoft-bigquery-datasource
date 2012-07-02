@@ -1,13 +1,8 @@
 #summary Table of Contents
 
-*[https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/InstallationOverview  InstallationOverview]
-
-* [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ActivatingBigQueryService Activating Google BigQuery Service]
-
-* [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/InstallationOverview#DownloadConnector Download Jaspersoft BigQuery Plugin Installation]
-
-* [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ConfiguringiReport Configuring iReport]
-
-* [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ReportCreation Creating a JasperReport]
-
-* [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/PublishReport Publishing a Report]
+*[ArticlesInstallationOverview Installation Overview]
+  * [ArticlesActivatingBigQueryService Activating Google BigQuery Service]
+  * [ArticlesInstallationOverview#DownloadConnector Download Jaspersoft BigQuery Plugin Installation]
+  * [ArticlesConfiguringiReport Configuring iReport]
+  * [ArticlesReportCreation Creating a JasperReport]
+  * [ArticlesPublishReport Publishing a Report]
