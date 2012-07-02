@@ -1,5 +1,4 @@
 #summary Table of Contents
-
 *[InstallationOverview Installation Overview]
   * [ActivatingBigQueryService Activating Google BigQuery Service]
   * [InstallationOverview#DownloadConnector Download BigQuery Connector]
