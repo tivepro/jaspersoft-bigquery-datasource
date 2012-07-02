@@ -4,4 +4,5 @@
   * [InstallationOverview#DownloadConnector Download BigQuery Connector]
   * [ConfiguringiReport Jaspersoft-BigQuery Plugin Installation]
   * [ReportCreation Creating a Report]
+  * [ConfiguringJasperReportsServer Deploying Jaspersoft BigQuery connector]
   * [PublishReport Publishing a Report]
