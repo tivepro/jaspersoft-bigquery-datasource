@@ -34,6 +34,8 @@ The following files are included:
   * Jaspersoft-iReport-!BigQueryPlugin-0.0.2
   * js-bigquery-datasource-0.0.2
 
+Download Jaspersoft BI Suite from [http://www.jaspersoft.com/jaspersoft-business-intelligence-software-trial here]
+
 ==*3. Installing Jaspersoft !BigQuery Plugin for iReport*==
  See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ConfiguringiReport Configuring iReport] for details.
 
