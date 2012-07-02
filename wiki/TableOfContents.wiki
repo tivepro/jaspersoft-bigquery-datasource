@@ -1,7 +1,7 @@
 #summary Table of Contents
 
 *[InstallationOverview]
-  * [ArticlesActivatingBigQueryService Activating Google BigQuery Service]
+  * [ActivatingBigQueryService Activating Google BigQuery Service]
   * [ArticlesInstallationOverview#DownloadConnector Download Jaspersoft BigQuery Plugin Installation]
   * [ArticlesConfiguringiReport Configuring iReport]
   * [ArticlesReportCreation Creating a JasperReport]
