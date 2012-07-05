@@ -16,8 +16,7 @@ import com.jaspersoft.bigquery.BigQueryDataSource;
 import com.jaspersoft.bigquery.connection.BigQueryConnection;
 
 /**
- * This implementation process report parameters to create a
- * {@link HBaseDataSource}
+ * This implementation process report parameters to create a {@link HBaseDataSource}
  * 
  * @author Eric Diaz
  * 
@@ -26,13 +25,10 @@ public class BigQueryQueryExecuter extends JRJdbcQueryExecuter {
 
     private final static Logger logger = Logger.getLogger(BigQueryQueryExecuter.class);
 
-    private Map<String, ? extends JRValueParameter> parameters;
-
     private BigQueryQueryWrapper wrapper;
 
     public BigQueryQueryExecuter(JRDataset dataset, Map<String, ? extends JRValueParameter> parameters) {
         super(dataset, parameters);
-        this.parameters = parameters;
     }
 
     protected void registerFunctions() {
@@ -64,7 +60,7 @@ public class BigQueryQueryExecuter extends JRJdbcQueryExecuter {
                 .get(JRParameter.REPORT_CONNECTION);
         if (connection == null) {
             logger.error("No BigQuery connection");
-            JRValueParameter valueParameter = parameters.get(JRParameter.REPORT_CONNECTION);
+            JRValueParameter valueParameter = getValueParameter(JRParameter.REPORT_CONNECTION, true);
             if (valueParameter == null) {
                 throw new JRException("No BigQuery connection");
             }
@@ -84,7 +80,7 @@ public class BigQueryQueryExecuter extends JRJdbcQueryExecuter {
      */
     @Override
     protected String getParameterReplacement(String parameterName) {
-        Object parameterValue = parameters.get(parameterName);
+        Object parameterValue = getValueParameter(parameterName, true);
         if (parameterValue == null) {
             throw new JRRuntimeException("Parameter \"" + parameterName + "\" does not exist.");
         }
