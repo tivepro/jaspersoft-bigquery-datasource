@@ -3,10 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jaspersoft.bigquery</groupId>
 	<artifactId>Jaspersoft-iReport-BigQueryPlugin</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.5</version>
 	<packaging>nbm</packaging>
 	<name>Jaspersoft iReport BigQuery Plugin</name>
 
+	<description>This plugin enables BigQuery connections from iReport.</description>
+	<url>https://code.google.com/p/jaspersoft-bigquery-datasource/</url>
 	<licenses>
 		<license>
 			<name>GNU GENERAL PUBLIC LICENSE</name>
@@ -15,7 +17,7 @@
 	</licenses>
 
 	<organization>
-		<name>Jaspersoft</name>
+		<name>Jaspersoft Corp</name>
 		<url>http://www.jaspersoft.com/</url>
 	</organization>
 
@@ -66,7 +68,7 @@
 		<dependency>
 			<groupId>com.jaspersoft.connectors.bigquery</groupId>
 			<artifactId>js-bigquery-datasource</artifactId>
-			<version>0.0.2</version>
+			<version>0.0.5</version>
 		</dependency>
 	</dependencies>
 
