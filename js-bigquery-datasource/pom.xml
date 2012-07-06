@@ -4,7 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.jaspersoft.connectors.bigquery</groupId>
 	<artifactId>js-bigquery-datasource</artifactId>
-	<version>0.0.2</version>
+	<name>jaspersoft-bigquery-datasource</name>
+	<version>0.0.5</version>
 
 	<dependencies>
 		<dependency>
@@ -157,6 +158,12 @@
 		</dependency>
 	</dependencies>
 
+	<description>This datasource connects JasperReports and JasperReports Server with BigQuery.</description>
+	<url>http://code.google.com/p/jaspersoft-bigquery-datasource/</url>
+	<organization>
+		<name>Jaspersoft Corporation</name>
+		<url>http://www.jaspersoft.com/</url>
+	</organization>
 	<build>
 		<plugins>
 			<plugin>
