@@ -1,3 +1,24 @@
+/*
+ * Copyright (C) 2005 - 2012 Jaspersoft Corporation. All rights reserved.
+ * http://www.jaspersoft.com.
+ *
+ * Unless you have purchased a commercial license agreement from Jaspersoft,
+ * the following license terms apply:
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Affero General Public License  as
+ * published by the Free Software Foundation, either version 3 of the
+ * License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU Affero  General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 package com.jaspersoft.bigquery.connection;
 
 import java.io.File;
@@ -19,6 +40,7 @@ import java.sql.SQLXML;
 import java.sql.Savepoint;
 import java.sql.Statement;
 import java.sql.Struct;
+import java.text.SimpleDateFormat;
 import java.util.Map;
 import java.util.Properties;
 
@@ -42,6 +64,7 @@ import com.google.api.services.bigquery.model.DatasetList.Datasets;
 /**
  * 
  * @author Eric Diaz
+ * @modified Matthew Dahlman 2012-07-06
  * 
  */
 public class BigQueryConnection implements Connection {
@@ -55,7 +78,7 @@ public class BigQueryConnection implements Connection {
 
     private String projectId;
 
-    private static final String APPLICATION_NAME = "Jaspersoft BigQuery Connector 0.0.2";
+    private static final String APPLICATION_NAME = "Jaspersoft BigQuery Connector 0.0.5";
 
     private final static String NTP_SERVER = "0.pool.ntp.org";
 
@@ -79,7 +102,7 @@ public class BigQueryConnection implements Connection {
     private void create() throws Throwable {
         File privateKeyFile = new File(privateKeyFilePath);
         if (!privateKeyFile.exists()) {
-            logger.warn("File \"" + privateKeyFilePath + "\" doesn't seem to be a full path. Trying the classpath");
+            logger.info("File \"" + privateKeyFilePath + "\" doesn't seem to be a full path. Searching the classpath.");
             URL resource = getClass().getClassLoader().getResource(privateKeyFilePath);
             if (resource == null) {
                 throw new JRException("The file \"" + privateKeyFilePath + "\" doesn't exist");
@@ -137,7 +160,7 @@ public class BigQueryConnection implements Connection {
                 List datasetRequest = bigquery.datasets().list("publicdata");
                 DatasetList datasetList = datasetRequest.execute();
                 StringBuilder builder = new StringBuilder();
-                builder.append("Available datasets on publicdata: ");
+                builder.append("Available datasets: ");
                 if (datasetList != null) {
                     java.util.List<Datasets> datasets = datasetList.getDatasets();
                     for (Datasets dataset : datasets) {
@@ -163,21 +186,28 @@ public class BigQueryConnection implements Connection {
                     ntpClient.close();
                 }
                 StringBuilder timeMessage = new StringBuilder();
-                timeMessage.append("Ensure your system clock is synchronized with a NTP server");
+                timeMessage.append("Ensure your system clock is synchronized with an NTP server.\n");
                 if (timeInfo != null) {
-                    timeInfo.computeDetails();
-                    timeMessage.append("\n: Current delay against \"");
-                    timeMessage.append(NTP_SERVER);
-                    timeMessage.append("\" is: ");
-                    timeMessage.append(timeInfo.getDelay());
+                  timeInfo.computeDetails();
+                  long offset = (timeInfo.getOffset() != null) ? timeInfo.getOffset() : 0l;
+                  SimpleDateFormat df    = new SimpleDateFormat("EEE yyyy MMM d HH:mm:ss SSS z");
+                  String localDateString = df.format( new java.util.Date(System.currentTimeMillis()) );
+                  String ntpDateString   = df.format( new java.util.Date(System.currentTimeMillis() + offset) );
+                  timeMessage.append("Current offset against \"");
+                  timeMessage.append(NTP_SERVER);
+                  timeMessage.append("\" is: ");
+                  timeMessage.append(offset);
+                  timeMessage.append(" milliseconds.\n");
+                  timeMessage.append("Current time on NTP   server: " + ntpDateString + "\n");
+                  timeMessage.append("Current time on local server: " + localDateString );
                 }
                 throw new JRException(
-                        "Unauthorized exception. Please review your serviceAccountId and privateKeyFilePath."
+                        "Unauthorized exception. Please review your serviceAccountId and privateKeyFilePath.\n"
                                 + timeMessage.toString());
             }
             throw new JRException(e);
         }
-        throw new JRException("Couldn't connect to BigQuery");
+        throw new JRException("Could not connect to BigQuery");
     }
 
     @Override
