@@ -28,7 +28,7 @@ The Jaspersoft-!BigQuery connector uses the *Service Account* scenario. Therefor
   # Create an OAuth Client ID.
   # Download the private key.
   # You need the following to use these credentials:
-    * The private key
+    * Private key
     * Email address
     * Project ID
 
