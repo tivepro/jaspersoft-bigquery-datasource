@@ -3,7 +3,7 @@
 
 = Installing and configuring the Jaspersoft !BigQuery Connector =
 
-=Summary=
+==Summary==
 
   # Activate the Google !BigQuery Service
   # Download Jaspersoft !BigQuery connector
@@ -12,14 +12,14 @@
   # Deploy Jaspersoft !BigQuery connector to !JasperReports Server
   # Publish a Report
 
-= Details =
+== Details ==
 
-==1. Activate the Google !BigQuery Service==
+===1. Activate the Google !BigQuery Service===
 See [ActivatingBigQueryService Activate Google BigQuery] for details.
 
 Existing !BigQuery users may skip the section 'Sign up for !BigQuery Service' in the above link. But they are advised to refer to the section 'Generate API Access ID' for instructions on the properties needed for establishing a Jaspersoft-!BigQuery Datasource connection.
 
-==2. Download Jaspersoft !BigQuery connector==
+===2. Download Jaspersoft !BigQuery connector===
 Download the following files from the [http://code.google.com/p/jaspersoft-bigquery-datasource/downloads/list downloads section]:
 
   * Jaspersoft-iReport-!BigQueryPlugin-0.0.4.nbm
@@ -27,14 +27,15 @@ Download the following files from the [http://code.google.com/p/jaspersoft-bigqu
 
 Download the [http://www.jaspersoft.com/jaspersoft-business-intelligence-software-trial Jaspersoft Business Intelligence Suite]. This includes both !JasperReports Server and iReport.
 
-==3. Install the Jaspersoft !BigQuery Plugin for iReport==
- See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ConfiguringiReport Configuring iReport] for details.
+===3. Install the Jaspersoft !BigQuery Plugin for iReport===
+By default iReport can connect to relational databases via JDBC. It can connect to XML, JSON, XLS, Hadoop Hive, MongoDB, and many other sources. But it cannot connect to Google !BigQuery. (Not yet!) But adding support for !BigQuery takes only a few seconds.<br>
+*See [ConfiguringiReport Configure iReport] for complete details.*
 
-==4. Creating a report in iReport==
- See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ReportCreation Creating a Report] for details.
+===4. Create a report in iReport===
+See [ReportCreation Create a Report] for details.
 
-==5. Deploying Jaspersoft !BigQuery connector to !JasperReports Server==
- See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ConfiguringJasperReportsServer Configuring JasperReports Server] for details.  
+===5. Deploy the Jaspersoft !BigQuery connector to !JasperReports Server===
+See [ConfiguringJasperReportsServer Configure JasperReports Server] for details.  
 
-==6. Publishing a Report==
- See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/PublishReport Publishing a Report] for details.  
+===6. Publish a Report===
+See [PublishReport Publishi a Report] for details.  
