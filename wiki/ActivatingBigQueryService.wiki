@@ -25,15 +25,16 @@ Google APIs use the OAuth 2.0 protocol for authentication and authorization. The
 The Jaspersoft-!BigQuery connector uses the *Service Account* scenario. Therefore you must obtain a Client ID and a private key. The connector uses this information to authenticate with !BigQuery. The steps are the following:
 
   # Navigate to the API Access on the left-hand sidebar in the Google APIs Console.
-  # Create an OAuth !Client Id.
+  # Create an OAuth Client ID.
   # Download the private key.
   # You need the following to use these credentials:
     * The private key
     * Email address
     * Project ID
 
-You can find project id in the Google APIs Console's url.
+https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/OAuth_ClientID_Create.png
 
+You can find project ID in the url of the Google APIs Console:
+https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/OAuth_ClientID_Info.png
 
-
-For detailed steps on signing up for !BigQuery click [https://developers.google.com/bigquery/docs/getting-started here].
+Refer to the [https://developers.google.com/bigquery/docs/getting-started official sign up documentation] for comprehensive details.
