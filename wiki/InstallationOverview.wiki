@@ -15,30 +15,26 @@
 = Details =
 
 ==1. Activate the Google !BigQuery Service==
-See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ActivatingBigQueryService Activate Google BigQuery] for details.
+See [ActivatingBigQueryService Activate Google BigQuery] for details.
 
 Existing !BigQuery users may skip the section 'Sign up for !BigQuery Service' in the above link. But they are advised to refer to the section 'Generate API Access ID' for instructions on the properties needed for establishing a Jaspersoft-!BigQuery Datasource connection.
 
-#sidebar DownloadConnector
+==2. Download Jaspersoft !BigQuery connector==
+Download the following files from the [http://code.google.com/p/jaspersoft-bigquery-datasource/downloads/list downloads section]:
 
-==*2. Download Jaspersoft !BigQuery connector*==
-Download the following files from the project [https://code.google.com/p/jaspersoft-bigquery-datasource/].
+  * Jaspersoft-iReport-!BigQueryPlugin-0.0.4.nbm
+  * jrs-bigquery-0.0.4.zip
 
-The following files are included:
-  * jrs-bigquery-0.0.2
-  * Jaspersoft-iReport-!BigQueryPlugin-0.0.2
-  * js-bigquery-datasource-0.0.2
+Download the [http://www.jaspersoft.com/jaspersoft-business-intelligence-software-trial Jaspersoft Business Intelligence Suite]. This includes both !JasperReports Server and iReport.
 
-Download Jaspersoft BI Suite from [http://www.jaspersoft.com/jaspersoft-business-intelligence-software-trial here]
-
-==*3. Installing Jaspersoft !BigQuery Plugin for iReport*==
+==3. Install the Jaspersoft !BigQuery Plugin for iReport==
  See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ConfiguringiReport Configuring iReport] for details.
 
-==*4. Creating a report in iReport*==
+==4. Creating a report in iReport==
  See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ReportCreation Creating a Report] for details.
 
-==*5. Deploying Jaspersoft !BigQuery connector to !JasperReports Server*==
+==5. Deploying Jaspersoft !BigQuery connector to !JasperReports Server==
  See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ConfiguringJasperReportsServer Configuring JasperReports Server] for details.  
 
-==*6. Publishing a Report*==
+==6. Publishing a Report==
  See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/PublishReport Publishing a Report] for details.  
