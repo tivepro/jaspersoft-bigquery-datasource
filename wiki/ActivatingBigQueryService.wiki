@@ -17,19 +17,23 @@
 
 https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/Activate_BigQuery.png
 
-== 2. Generating API Access ID ==
-1. Navigate to the API Access on the left-hand sidebar.
+That should be enough to get started. Refer to the [https://developers.google.com/bigquery/docs/getting-started official sign up documentation] for comprehensive details.
 
-2. Generate OAuth !ClientId for 'Service Account' application type.
+===2. Generating API Access ID===
+Google APIs use the OAuth 2.0 protocol for authentication and authorization. There are many possible scenarios for using OAuth including Login, Web Server Applications, Client-side Applications, Installed Applications, Devices, and Service Accounts. Refer to the [https://developers.google.com/accounts/docs/OAuth2 official OAuth2 documentation] for complete details.
 
-Note:You may also choose to use previously generated OAuth !ClientId and its private key for 'Service Account' application type.
+The Jaspersoft-!BigQuery connector uses the *Service Account* scenario. Therefore you must obtain a Client ID and a private key. The connector uses this information to authenticate with !BigQuery. The steps are the following:
 
-3. Download the private key 
+  # Navigate to the API Access on the left-hand sidebar in the Google APIs Console.
+  # Create an OAuth !Client Id.
+  # Download the private key.
+  # You need the following to use these credentials:
+    * The private key
+    * Email address
+    * Project ID
 
-4. Note down the following details to associate this credentials for Jaspersoft-!BigQuery integration :
-     * account email id
-     * project id 
-     * private key
-Note:You can find project id in the Google APIs Console's url with the particular project chosen as your current project
+You can find project id in the Google APIs Console's url.
+
+
 
 For detailed steps on signing up for !BigQuery click [https://developers.google.com/bigquery/docs/getting-started here].
