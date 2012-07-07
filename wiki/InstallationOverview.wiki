@@ -1,7 +1,7 @@
-#summary Getting started with creating Jaspersoft reports with Google BigQuery Data Source.Note: New users should start with this page.
+#summary Getting started with creating Jaspersoft reports with a Google BigQuery Data Source. Note: New users should start with this page.
 #labels Featured
 
-= Installing and configuring Jaspersoft !BigQuery Connector =
+= Installing and configuring the Jaspersoft !BigQuery Connector =
 
 =*Summary*=
 
