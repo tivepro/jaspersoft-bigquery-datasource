@@ -1,4 +1,4 @@
-#summary Activate the Google BigQuery Service
+#summary Activate Google BigQuery Service
 
 =Activate !BigQuery=
 
