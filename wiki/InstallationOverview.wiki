@@ -1,25 +1,25 @@
-#summary Getting started with creating Jaspersoft reports with a Google BigQuery Data Source. Note: New users should start with this page.
+#summary Getting started with creating Jaspersoft reports with a Google BigQuery Data Source. New users should start with this page.
 #labels Featured
 
 = Installing and configuring the Jaspersoft !BigQuery Connector =
 
 =*Summary*=
 
-* 1. Activating Google !BigQuery Service*
+* 1. Activate the Google !BigQuery Service*
 
 * 2. Download Jaspersoft !BigQuery connector*
 
-* 3. Installing Jaspersoft !BigQuery Plugin for iReport*
+* 3. Install Jaspersoft !BigQuery Plugin for iReport*
 
-* 4. Creating a report in iReport*
+* 4. Create a report in iReport*
 
-* 5. Deploying Jaspersoft !BigQuery connector to !JasperReports Server*
+* 5. Deploy Jaspersoft !BigQuery connector to !JasperReports Server*
 
-* 6. Publishing a Report*
+* 6. Publish a Report*
 
 = Details =
 
-==*1. Activating Google !BigQuery Service==
+==*1. Activate the Google !BigQuery Service==
 See [https://code.google.com/p/jaspersoft-bigquery-datasource/wiki/ActivatingBigQueryService Activating Google BigQuery Service] for details.
 
 Note:
