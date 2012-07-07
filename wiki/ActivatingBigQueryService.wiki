@@ -15,6 +15,8 @@
   # Turn on !BigQuery.
   # If prompted, review and agree to Terms of Service.
 
+https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/Activate_BigQuery.png
+
 == 2. Generating API Access ID ==
 1. Navigate to the API Access on the left-hand sidebar.
 
