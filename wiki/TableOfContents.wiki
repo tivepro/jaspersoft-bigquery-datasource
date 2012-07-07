@@ -1,8 +1,8 @@
 #summary Table of Contents
   # [InstallationOverview Installation Overview]
-  # [ActivatingBigQueryService Activating BigQuery Service]
+  # [ActivatingBigQueryService Activate BigQuery]
   # [InstallationOverview#DownloadConnector Download Jaspersoft-BigQuery Connector]
-  # [ConfiguringiReport Jaspersoft-BigQuery Plugin Installation]
-  # [ReportCreation Creating a Report]
-  # [ConfiguringJasperReportsServer Deploying Jaspersoft-BigQuery connector]
-  # [ReportPublishing Publishing a Report]
+  # [ConfiguringiReport Install Jaspersoft-BigQuery Plugin]
+  # [ReportCreation Create a Report]
+  # [ConfiguringJasperReportsServer Install Jaspersoft-BigQuery Connector]
+  # [ReportPublishing Publish a Report]
