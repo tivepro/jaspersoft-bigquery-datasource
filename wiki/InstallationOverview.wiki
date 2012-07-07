@@ -25,7 +25,7 @@ Download the following files from the [http://code.google.com/p/jaspersoft-bigqu
   * Jaspersoft-iReport-!BigQueryPlugin-0.0.4.nbm
   * jrs-bigquery-0.0.4.zip
 
-Download the [http://www.jaspersoft.com/jaspersoft-business-intelligence-software-trial Jaspersoft Business Intelligence Suite]. This includes both !JasperReports Server and iReport.
+Download the [http://www.jaspersoft.com/thanks-download-30-day Jaspersoft Business Intelligence Suite]. This includes both !JasperReports Server and iReport.
 
 ===3. Install the Jaspersoft !BigQuery Plugin for iReport===
 By default iReport can connect to relational databases via JDBC. It can connect to XML, JSON, XLS, Hadoop Hive, MongoDB, and many other sources. But it cannot connect to Google !BigQuery. (Not yet!) But adding support for !BigQuery takes only a few seconds.<br>
