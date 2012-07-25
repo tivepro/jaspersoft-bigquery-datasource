@@ -38,4 +38,4 @@ See [ReportCreation Create a Report] for details.
 See [ConfiguringJasperReportsServer Configure JasperReports Server] for details.  
 
 ===6. Publish a Report===
-See [PublishReport Publishi a Report] for details.  
+See [ReportPublishing Publishing a Report] for details.  
