@@ -48,4 +48,4 @@ https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/JRS_Big
 
 == *3. Deploy a report to !JasperReports Server* ==
 
-Deploy the report from iReport using the built-in connection to browse the JasperReports Server Repository. Alternatively, you can use the web interface in JasperReports Server to deploy a report. In most cases it's quicker to deploy from iReport.
+Deploy the report from iReport using the built-in connection to browse the !JasperReports Server Repository. Alternatively, you can use the web interface in !JasperReports Server to deploy a report. In most cases it's quicker to deploy from iReport.
