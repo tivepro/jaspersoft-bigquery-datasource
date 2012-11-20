@@ -30,7 +30,7 @@ WEB-INF/lib/protobuf-java-2.3.0.jar
 WEB-INF/lib/xpp3-1.1.4c.jar
 }}}
 
-Copy these files into your JasperReports Server instance. Be sure to keep the folder structure when copying the files. Add your private key (.p12 file) to the classes directory.
+Copy these files into your !JasperReports Server instance. Be sure to keep the folder structure when copying the files. Add your private key (.p12 file) to the classes directory.
 
 b) Start or restart !JasperReports Server.
 
