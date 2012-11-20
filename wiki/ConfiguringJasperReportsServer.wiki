@@ -1,32 +1,43 @@
 #summary Configuring JasperReports Server
 = Summary =
-*Configuring !JasperReports Server*
+Configuring !JasperReports Server
 
-*1. Deploy query executor to !JasperReports Server*
+1. Deploy the Big Query connector to !JasperReports Server
 
-*2. Deploy report to !JasperReports Server*
+2. Deploy a report to !JasperReports Server
 
 = Details =
 
 == *Configuring !JasperReports Server* ==
 
-== *1. Deploy query executor to !JasperReports Server* ==
-1. Copy the files in WEB-INF from step 1 into 
+== *1. Deploy the Big Query connector to !JasperReports Server* ==
+1. Unzip the file jrs-bigquery-x.y.z.zip. It will have a structure similar to this:
 
-<pre><appserver>/webapps/jasperserver-pro/WEB-INF</pre>
+{{{
+WEB-INF/applicationContext-BigQueryDataSource.xml
+WEB-INF/bundles/BigQueryDataSource.properties
+WEB-INF/classes/yourPrivateKeyGoesInThisFolder.p12
+WEB-INF/lib/google-api-client-1.8.0-beta.jar
+WEB-INF/lib/google-api-services-bigquery-v2-rev5-1.5.0-beta.jar
+WEB-INF/lib/google-http-client-1.8.3-beta.jar
+WEB-INF/lib/google-oauth-client-1.8.0-beta.jar
+WEB-INF/lib/guava-11.0.1.jar
+WEB-INF/lib/js-bigquery-datasource-0.0.4.jar
+WEB-INF/lib/jsr305-1.3.9.jar
+WEB-INF/lib/protobuf-java-2.3.0.jar
+WEB-INF/lib/xpp3-1.1.4c.jar
+}}}
 
-Be sure to keep the folder structure when copying the files.
+Copy these files into your JasperReports Server instance. Be sure to keep the folder structure when copying the files. Add your private key (.p12 file) to the classes directory.
 
 2. Start or restart !JasperReports Server.
 
-== *2. Deploy the report to !JasperReports Server* ==
+== *2. Deploy a report to !JasperReports Server* ==
 
 === *Data Source* ===
-1. Define the data source in !JasperReports Server
+1. Define a Big Query data source in !JasperReports Server
 
-2. Expand 'Folders'
-
-3. Right-click on 'Data Sources' and select 'Add Resource' to add Data Source
+3. Right-click on a folder and select 'Add Resource' to add Data Source
 
 https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/JRS_AddResource.png
 
