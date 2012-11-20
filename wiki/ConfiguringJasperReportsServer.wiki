@@ -4,14 +4,16 @@ Configuring !JasperReports Server
 
 1. Deploy the Big Query connector to !JasperReports Server
 
-2. Deploy a report to !JasperReports Server
+2. Define the Data Source
+
+3. Deploy a report to !JasperReports Server
 
 = Details =
 
 == *Configuring !JasperReports Server* ==
 
 == *1. Deploy the Big Query connector to !JasperReports Server* ==
-1. Unzip the file jrs-bigquery-x.y.z.zip. It will have a structure similar to this:
+a) Unzip the file jrs-bigquery-x.y.z.zip. It will have a structure similar to this:
 
 {{{
 WEB-INF/applicationContext-BigQueryDataSource.xml
@@ -30,17 +32,20 @@ WEB-INF/lib/xpp3-1.1.4c.jar
 
 Copy these files into your JasperReports Server instance. Be sure to keep the folder structure when copying the files. Add your private key (.p12 file) to the classes directory.
 
-2. Start or restart !JasperReports Server.
+b) Start or restart !JasperReports Server.
 
-== *2. Deploy a report to !JasperReports Server* ==
+== *2. Define the Data Source* ==
 
-=== *Data Source* ===
-1. Define a Big Query data source in !JasperReports Server
+a) Define a Big Query data source in !JasperReports Server
 
-3. Right-click on a folder and select 'Add Resource' to add Data Source
+b) Right-click on a folder and select 'Add Resource' to add Data Source
 
 https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/JRS_AddResource.png
 
-4. Set the Data Source properties.   
+c) Set the Data Source properties.   
 
 https://jaspersoft-bigquery-datasource.googlecode.com/svn/wiki/Resources/JRS_BigQueryDataSource.png
+
+== *3. Deploy a report to !JasperReports Server* ==
+
+Deploy the report from iReport using the built-in connection to browse the JasperReports Server Repository. Alternatively, you can use the web interface in JasperReports Server to deploy a report. In most cases it's quicker to deploy from iReport.
